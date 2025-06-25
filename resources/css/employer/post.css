@@ -1,0 +1,466 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/header.css';
+@import '../base/footer.css';
+
+.post {
+    padding-top: calc(var(--header-height) + 40px);
+    background-color: var(--color-background);
+}
+
+.complaintNone {
+    display: none;
+}
+
+.complaint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.complaint p {
+    width: 100%;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 2rem;
+}
+
+.complaint a {
+    background-color: var(--color-base);
+    font-size: 1.4rem;
+    padding: 8px 12px;
+    color: var(--color-white);
+    border-radius: 12px;
+}
+
+.post__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.post__logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.post__nameCompany {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.post__top p {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.post__nameBranch {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* --------------<< css list post >>--------------------------- */
+.listJob__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-base);
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listJob__add {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-base);
+    cursor: pointer;
+}
+
+.listJob__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.listJob__item {
+    width: calc(100% / 3 - 20px);
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .04);
+    /* margin: 10px 0; */
+    padding: 12px;
+    position: relative;
+}
+
+.listJob__item--body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.listJob__item {
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .04);
+    margin: 10px 0;
+    padding: 12px;
+    position: relative;
+}
+
+.listJob__item:hover {
+    border: 1px solid var(--color-base);
+}
+
+.listJob__item--left {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dde4ec;
+    border-radius: 6px;
+    display: flex;
+    height: 64px;
+    padding: 6px;
+    position: relative;
+    width: 64px;
+}
+
+.listJob__item--logo {
+    align-items: center;
+    background: #fff;
+    border-radius: 3px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.listJob__item--right {
+    width: 76%;
+}
+
+.listJob__item--title {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #212f3f;
+    display: -webkit-box;
+    line-height: 20px;
+    margin-bottom: 0;
+    min-height: 24px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.listJob__item:hover .listJob__item--title {
+    color: var(--color-base);
+}
+
+.listJob__item--company {
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    margin-top: 0;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    color: #6f7882;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-top: 4px;
+    height: 16px;
+    display: -webkit-box;
+}
+
+.listJob__item--footer {
+    align-items: flex-end;
+    display: flex;
+    gap: 4px;
+    justify-content: space-between;
+    margin-top: 6px;
+    width: 100%;
+}
+
+.listJob__item--info {
+    align-items: center;
+    background: #edeff0;
+    border-radius: 34px;
+    color: #263a4d;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 4px 10px;
+}
+
+.listJob__item--footerItem {
+    white-space: nowrap;       /* Không cho xuống dòng */
+    overflow: scroll;          /* Ẩn phần vượt quá kích thước */
+    /* text-overflow: ellipsis;   Hiển thị "..." khi bị cắt */
+    max-width: 100%;           /* Giới hạn chiều rộng theo container */
+}
+
+.listJob__item--footerItem i {
+    color: var(--color-base);
+    border: 1px solid var(--color-base);
+    padding: 6px;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer; 
+}
+
+.listJob__item--footerItem i:hover {
+    background-color: var(--color-base-super-pale);
+}
+
+.listJob__item--desc {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    max-height: 200%;
+    overflow-y: scroll;
+    background: var(--color-white);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: none;
+    transition: opacity 0.2s ease;
+    bottom: calc(100% + 4px);
+    left: 0;
+    z-index: 999;
+    border: 1px solid var(--color-base);
+}
+
+.listJob__item--descTitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-base);
+    margin: 20px 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.listJob__item--descDeadline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-base);
+    margin-bottom: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+.listJob__item--descItem {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.listJob__item--descItem span {
+    align-items: center;
+    background: #edeff0;
+    border-radius: 34px;
+    color: #263a4d;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 4px 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.listJob__item--descDesc {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.listJob__item--btn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.listJob__item--btnItemFull {
+    width: 100%;
+    font-size: 1.2rem;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.listJob__item--btnItem {
+    width: calc(50% - 4px);
+    font-size: 1.2rem;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.listJob__item--btnItemFull:hover,
+.listJob__item--btnItem:hover {
+    background-color: var(--color-base);
+    color: var(--color-white);
+    border: 1px solid var(--color-base);
+}
+
+/* ------------------------<< css form add post >>--------------------------- */
+.formAddPost,
+.formUpdatePost {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.formAddPost__container,
+.formUpdatePost__container {
+    width: 500px;
+    padding: 20px 20px 0;
+    height: 90vh;
+    margin: auto;
+    background-color: var(--color-white);
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.formAddPost__top,
+.formUpdatePost__top {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 12px;
+}
+
+.formAddPost__top i,
+.formUpdatePost__top i {
+    font-size: 3.2rem;
+    color: var(--color-base);
+    cursor: pointer;
+}
+
+.formAddPost__body,
+.formUpdatePost__body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formAddPost__title,
+.formUpdatePost__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-base);
+    margin-bottom: 20px;
+}
+
+.formAddPost__item,
+.formUpdatePost__item {
+    margin-bottom: 20px;
+}
+
+.formAddPost__item label,
+.formUpdatePost__item label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-base);
+    margin-bottom: 4px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formAddPost__item input,
+.formUpdatePost__item input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--color-black);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-black);
+    outline: none;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--color-black);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-black);
+    outline: none;
+}
+
+.salary_type_range {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.salary_type_range input {
+    width: calc(100% / 2 - 4px);
+}
+
+.salary_type_upto {
+    margin-top: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--color-base);
+    color: var(--color-white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}

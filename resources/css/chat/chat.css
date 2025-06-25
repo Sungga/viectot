@@ -1,0 +1,180 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/header.css';
+@import '../base/footer.css';
+
+.chat__container {
+    margin-top: calc(var(--header-height) + 20px);
+    width:100%;
+    height: calc(100vh - var(--header-height) - 20px - 70.4px); 
+    display: flex;
+}
+
+.chat__left {
+    width: 20%;
+    min-height: 200px;
+}
+
+.chat__left--item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 4px;
+    border: 1px solid var(--color-black);
+}
+
+.chat__left--left {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-base);
+    overflow: hidden;
+}
+
+.chat__left--name {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat__left--nameMain {
+    font-size: 1.2rem;
+    font-weight: bold;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;      /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat__left--content {
+    font-size: 1.2rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;      /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat__left--right {
+    width: calc(100% - 50px - 8px);
+}
+
+.chat__right {
+    width: 90%;
+    border:1px solid #ccc; 
+    padding:10px;
+    height: 100%;
+}
+
+.sender span,
+.receiver span {
+    border: 1px solid var(--color-black);
+    padding: 4px 8px;
+    display: inline-block;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    max-width: 80%;
+    text-align: left;
+}
+
+.receiver span {
+    background-color: var(--color-base);
+    color: var(--color-white);
+    border: none;
+}
+
+.sender {
+    text-align: right;
+}
+
+.chat__right--top {
+    height: 26%;
+    width: 100%;
+    text-align: center;
+}
+
+.chat__right--branch {
+    font-size: 2rem;
+    color: var(--color-base);
+    margin-bottom: 2px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;      /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat__right--company {
+    display: inline-block;
+    padding-left: 4px;
+    /* border-left: 4px solid #6c6c6c; */
+    color: #6c6c6c;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;      /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat__right--candidate {
+    font-size: 1.4rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;      /* Số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#chat-box {
+    overflow-y:scroll; 
+    height: 64%;
+}
+
+.chat__right--bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 10%;
+}
+
+#message {
+    resize: none;      /* Tắt hoàn toàn việc kéo dãn */
+    overflow: auto;    /* Cuộn nếu nội dung vượt quá khung */
+    width: calc(100% - 100px);
+    height: 40px;
+    padding: 12px;
+    outline: none;
+    font-size: 1.4rem;
+    border-radius: 16px;
+    border: 1px solid var(--color-black);
+}
+
+#message::-webkit-scrollbar {
+  width: 0px;  /* Độ rộng dọc */
+  height: 0px; /* Độ rộng ngang */
+}
+
+#send-btn {
+    width: 90px;
+    border: 1px solid var(--color-base);
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    background-color: var(--color-base);
+    border-radius: 16px;
+    cursor: pointer;
+}

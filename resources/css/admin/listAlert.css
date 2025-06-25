@@ -1,0 +1,60 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/headerAdmin.css';
+@import '../base/footer.css';
+
+.listAlert {
+    margin-top: calc(var(--header-height) + 20px);
+    margin-bottom: 20px;
+}
+
+.listAlert__top {
+    width: 100%;
+}
+
+.listAlert__top a {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    color: var(--color-base);
+    font-size: 1.4rem;
+}
+.listAlert__title {
+    width: 100%;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-base);
+}
+
+.listAlert__item {
+    width: 100%;
+    border: 1px solid var(--color-black);
+    padding: 8px;
+    margin-bottom: 4px;
+}
+
+.listAlert__item:hover {
+    background-color: var(--color-base-pale);
+}
+
+.listAlert__item--title {
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    white-space: nowrap;       /* Không xuống dòng */
+    overflow: hidden;          /* Ẩn phần vượt */
+    text-overflow: ellipsis; 
+}
+
+.listAlert__item--content {
+    font-size: 1.4rem;
+
+    display: -webkit-box;           /* Hỗ trợ trên Chrome, Safari */
+    -webkit-line-clamp: 2;          /* Giới hạn 2 dòng */
+    -webkit-box-orient: vertical;   
+    overflow: hidden;               /* Ẩn phần vượt */
+    text-overflow: ellipsis;  
+}

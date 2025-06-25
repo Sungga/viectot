@@ -1,0 +1,69 @@
+/* @font-face {
+  font-family: 'Inter';
+  src: url('/public/fonts/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-variation-settings: "wght" 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('public/font/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-variation-settings: "wght" 400;
+} */
+  
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; /* Độ đậm bình thường */
+}
+
+h1 {
+    font-weight: 700; /* Đậm hơn */
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+/* Reset toàn diện hơn */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+

@@ -1,0 +1,240 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/header.css';
+@import '../base/footer.css';
+
+.listApplication {
+    margin: calc(var(--header-height) + 20px) 0 20px;
+}
+
+.listApplication__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.apply__logoCompany {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-black);
+}
+
+.apply__logoCompany img {
+    width: 90%;
+    height: 90%;
+}
+
+.apply__title {
+    font-size: 2.8rem;
+    color: var(--color-base);
+    text-transform: uppercase;
+}
+
+.apply__branch {
+
+}
+
+.apply__company {
+    padding-left: 12px;
+    border-left: 4px solid #949494;
+    color: #949494;
+}
+
+.listApplication__list {
+    width: 100%;
+}
+
+.listApplication__list--title {
+    width: 100%;
+    text-align: left;
+    font-size: 2rem;
+    color: var(--color-base);
+    margin-bottom: 20px;
+    margin-top: 12px;
+}
+
+.listCv__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.listCv__item {
+    width: calc(100% / 4 - 16px);
+    border: 1px solid transparent;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, .04);
+    background-color: var(--color-white);
+    cursor: pointer;
+}
+
+.listCv__item:hover {
+    border: 1px solid var(--color-base);
+}
+
+.listCv__contCv {
+    width: 100%;
+    height: 240px;
+    border-radius: 8px;
+    border: 1px solid #dde4ec;
+    padding: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+}
+
+.listCv__cv {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.listCv__candidate {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.listCv__avt {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.listCv__name {
+    width: calc(100% - 40px - 8px);
+    font-size: 1.4rem;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.listCv__item:hover .listCv__name {
+    color: var(--color-base);
+}
+
+.listCv__province,
+.listCv__category {
+    align-items: center;
+    background: #edeff0;
+    border-radius: 34px;
+    color: #263a4d;
+    display: inline-flex;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+}
+
+.listCv__item--bottom {
+    margin-bottom: 8px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.listCv__item--form {
+        width: calc(50% - 4px);
+}
+
+.listCv__item--btn {
+    width: 100%;
+    border: 1px solid var(--color-black);
+    padding: 12px;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.listCv__item--btn:hover {
+    background-color: var(--color-base);
+    border: 1px solid var(--color-base);
+    color: var(--color-white);
+}
+
+.listCv__item--contact {
+    padding: 12px;
+    border: 1px solid var(--color-black);
+    margin-top: 8px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 12px;
+}
+
+.listCv__item--contact:hover {
+    background-color: var(--color-base);
+    color: var(--color-white);
+    border: 1px solid var(--color-base);
+}
+
+.formPass {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.formPass__container {
+    width: 300px;
+    padding: 16px;
+    margin: auto;
+    background-color: var(--color-white);
+    border-radius: 12px;
+}
+
+.formPass__exit {
+    margin-bottom: 16px;
+    text-align: right;
+}
+
+.formPass__exit--icon {
+    font-size: 2.8rem;
+    cursor: pointer;
+    color: var(--color-base);
+}
+
+.formPass__container input {
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 1.4rem;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.formPass__container button {
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 1.4rem;
+    border: 1px solid var(--color-black);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.formPass__container button:hover {
+    background-color: var(--color-base);
+    color: var(--color-white);
+    border: 1px solid var(--color-base);
+}

@@ -1,0 +1,177 @@
+.account {
+    padding: 0 12px;
+}
+
+.account-container {
+    width: 100%;
+    max-width: 500px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: calc(var(--header-height) + 40px); 
+    margin-right: auto;
+    margin-left: auto;  
+    position: relative;  
+    background-color: rgba(255, 255, 255, .8);
+    /* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* overflow-y: scroll; */
+}
+
+.account__background {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 499px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: -9999;
+}
+@media (max-width: 500px) {
+    .account__background {
+        padding: 12px; } }
+
+.account__background img {
+    width: 100%;
+    height: 100%;
+    max-width: 499px;
+}
+
+.account__iconSave {
+    position: absolute;
+    top: calc(var(--header-height) + 10px);
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-base);
+}
+
+.account__avtLabel {
+    width: 100px;
+    height: 100px;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+}
+
+.account__avt {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.account__avatar--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* lớp mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    transition: 0.3s ease;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.account__avtLabel:hover .account__avatar--overlay {
+    background-color: rgba(0, 0, 0, 0.1); /* lớp mờ */
+}
+
+.account__avatar--overlay i {
+    font-size: 2rem;
+    opacity: 0;
+    color: var(--color-base);
+}
+
+.account__avtLabel:hover .account__avatar--overlay i {
+    opacity: 1;
+}
+
+.account__name {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.account__labelItem {
+    font-size: 1.2rem;
+    width: 74%;
+    text-align: left;
+    color: #525252;
+}
+
+.account__input {
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 14px 20px;
+    font-size: 1.4rem;
+    background: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+    outline: none;
+    margin-top: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.account__box {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.account__box--item {
+    width: 50%;
+}
+
+.account__box--item .account__input {
+    width: 98%;
+}
+
+.account__labelItem[for="district"] {
+    margin-left: 28%;
+}
+
+.account__labelItem[for="province"] {
+    margin-left: 8%;
+}
+
+.account__district {
+    margin-left: 2%;
+}
+
+.account__save {
+    width: 80%;
+    border: 1px solid var(--color-base);
+    border-radius: 20px;
+    margin: 20px 0 40px;
+    padding: 12px 20px;
+    font-size: 1.4rem;
+    background-color: var(--color-base);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.account__save:hover {
+    border: 1px solid var(--color-base-pale);
+    background-color: var(--color-base-pale);
+}
+
+  

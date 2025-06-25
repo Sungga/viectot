@@ -1,0 +1,518 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/header.css';
+@import '../base/footer.css';
+
+.post-top {
+    margin-top: calc(var(--header-height) + 40px);
+}
+
+.post-top__container {
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.post-top__addCompany {
+    margin: auto;
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: 1px solid var(--color-base);
+    border-radius: 32px;
+    background-color: var(--color-base);
+    color: var(--color-white);
+}
+
+.post-top__addCompany:hover {
+    background-color: var(--color-base-pale);
+    border: 1px solid var(--color-base-pale);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.post-yourCompany {
+    margin-bottom: 40px;
+}
+
+.post-yourCompany__conatiner {
+    width: 100%;
+}
+
+.post-yourCompany__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-base);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.post-yourCompany__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-yourCompany__name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.post-yourCompany__name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+}
+
+.post-yourCompany__addBranch {
+    font-size: 1.4rem;
+    color: var(--color-base);
+    cursor: pointer;
+}
+
+.post-listBranch {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.post-listBranch__item {
+    width: calc(100% / 4 - 18px);
+    /* height: auto; */
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.post-listBranch__item:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    /* transform: scale(1.001); */
+}
+
+.post-listBranch__img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid var(--color-black-medium);
+    margin-bottom: 8px;
+}
+
+.post-listBranch__item:hover .post-listBranch__img {
+    border: 1px solid var(--color-base);
+}
+
+.post-listBranch__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.post-listBranch__name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     /* Giới hạn 2 dòng */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-listBranch__address {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.post-listBranch__district,
+.post-listBranch__province {
+    font-size: 1.2rem;
+    color: var(--color-black);
+    padding: 4px 8px;
+    background-color: var(--color-black-pale);
+    margin-right: 8px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.post-listBranch__action {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+
+.post-listBranch__edit,
+.post-listBranch__delete {
+    width: calc(100% / 2);
+    display: inline-block;
+    text-align: center;
+    padding: 8px 0;
+    border: 1px solid var(--color-black);
+    border-radius: 16px;
+    font-size: 1.2rem;
+}
+
+.post-listBranch__edit:hover,
+.post-listBranch__delete:hover,
+.post-listBranch__showPost:hover {
+    background-color: var(--color-base);
+    border: 1px solid var(--color-base);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.post-listBranch__showPost {
+    width: 100%;
+    padding: 8px;
+    display: block;
+    border: 1px solid var(--color-black);
+    border-radius: 14px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* ---------------<< add your company >>-------------------- */
+.post-addCompany,
+.post-addBranch,
+.post-updateCompany,
+.post-updateBranch {
+    width: 100%;
+    height: 100vh;
+    /* display: flex;    */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+
+.post-addCompany__cont,
+.post-updateCompany__cont,
+.post-addBranch__cont,
+.post-updateBranch__cont {
+    width: 500px;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: scroll;
+    margin: auto;
+    position: relative; 
+    border-radius: 20px;
+}
+
+.post-addCompany__close,
+.post-addBranch__close,
+.post-updateCompany__close,
+.post-updateBranch__close {
+    font-size: 2.4rem;
+    color: var(--color-base);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.post-addCompany__save,
+.post-addBranch__save,
+.post-updateCompany__save,
+.post-updateBranch__save {
+    font-size: 2.4rem;
+    color: var(--color-base);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.post-addCompany__container,
+.post-updateCompany__container,
+.post-addBranch__container,
+.post-updateBranch__container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-white);
+    padding: 40px;
+}
+
+.post--addCompany__title,
+.post--updateCompany__title,
+.post--addBranch__title,
+.post--updateBranch__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--color-black);
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.account__avtLabel {
+    width: 100px;
+    height: 100px;
+    display: block;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.account__avt {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.account__avatar--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0); /* lớp mờ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0; */
+    transition: 0.3s ease;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.account__avtLabel:hover .account__avatar--overlay {
+    background-color: rgba(0, 0, 0, 0.1); /* lớp mờ */
+}
+
+.account__avatar--overlay i {
+    font-size: 2rem;
+    opacity: 0;
+    color: var(--color-base);
+}
+
+.account__avtLabel:hover .account__avatar--overlay i {
+    opacity: 1;
+}
+
+.post-addCompany__name,
+.post-updateCompany__name,
+.post-addBranch__name,
+.post-updateBranch__name {
+    outline: none;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.post-addCompany__miniTitle,
+.post-updateCompany__miniTitle,
+.post-addBranch__miniTitle,
+.post-updateCompany__miniTitle {
+    width: 100%;
+    font-size: 1.4rem;
+    margin-top: 8px;
+}
+
+.post-addCompany__desc,
+.post-updateCompany__desc,
+.post-addBranch__desc,
+.post-updateBranch__desc {
+    width: 100%;
+}
+
+.post-addCompany__miniTitle--document,
+.post-updateCompany__miniTitle--document,
+.post-addBranch__miniTitle--img,
+.post-updateBranch__miniTitle--img {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.post-addCompany__document,
+.post-addBranch__img,
+.post-updateCompany__document,
+.post-updateBranch__img {
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px dashed var(--color-black-medium);
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.post-addCompany__address,
+.post-updateCompany__address,
+.post-addBranch__address,
+.post-updateBranch__address {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.post-addCompany__province,
+.post-addBranch__province,
+.post-addCompany__district,
+.post-addBranch__district,
+.post-updateCompany__province,
+.post-updateBranch__province,
+.post-updateCompany__district,
+.post-updateBranch__district {
+    width: calc(100% / 2 - 18px);
+    font-size: 1.4rem;
+    padding: 8px;
+    outline: none;
+}
+
+/* css map */
+.leaflet-control-locate {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px;
+    font-size: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.leaflet-control-locate:hover {
+    background-color: #f0f0f0;
+}
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.post-addManager {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    /* display: flex; */
+    display: none;
+}
+
+.post-addManager__container {
+    width: 500px;
+    max-height: 90%;
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;
+    margin: auto;
+    position: relative; 
+    border-radius: 20px;
+    background-color: var(--color-white);
+    padding: 16px;
+}
+
+.post-addManager__exit {
+    font-size: 2.4rem;
+    color: var(--color-base);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.post--addCompany__title {
+    font-size: 3.2rem;
+    color: var(--color-base);
+}
+
+.post-addManager__search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.post-addManager__search--name {
+    width: calc(70% - 4px);
+    border: 1px solid var(--color-black);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.post-addManager__search--id {
+    width: calc(30% - 4px);
+    border: 1px solid var(--color-black);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.post-addManager__search--search {
+    width: 100%;
+    padding: 8px;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    background-color: var(--color-base);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.post-addManager__search--select button {
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    background-color: var(--color-base);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-addManager__search--select img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+.post-addManager__search--alerNotFound {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+}

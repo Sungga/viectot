@@ -1,0 +1,88 @@
+@import '../base/base.css';
+@import '../base/reset.css';
+@import '../base/headerAdmin.css';
+@import '../base/footer.css';
+
+.listAlert {
+    margin-top: calc(var(--header-height) + 20px);
+    margin-bottom: 20px;
+}
+
+.listAlert__top {
+    width: 100%;
+    font-size: 3.2rem;
+    color: var(--color-base);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.listAlert__name {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.listAlert__content {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.listAlert__img {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.listAlert__img img { 
+    width: 50%;
+    margin: auto;
+}
+
+.listAlert__path {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.listAlert__path a {
+    font-size: 1.4rem;
+    border: 1px solid var(--color-base);
+    padding: 12px 20px;
+    background-color: var(--color-base);
+    color: var(--color-white);
+}
+
+
+
+.listAlert__action {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listAlert__action a {
+    display: inline-block;
+    /* border: 1px solid var(--color-black); */
+    margin: 20px 8px;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+}
+
+.unlock {
+    background-color: var(--color-base);
+    border: 1px solid var(--color-base);
+    color: var(--color-white);
+}
+
+.lock {
+    background-color: var(--color-red);
+    border: 1px solid var(--color-red);
+    color: var(--color-white);
+}
+
+.reject {
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+    color: var(--color-white);
+}
