@@ -634,7 +634,7 @@ class EmployerController extends Controller
         $cvs = collect($applications)->map(function ($app) {
             if (!empty($app['cvNotReject'])) {
                 // Gộp status từ application vào cvNotReject
-                $app['cvNotReject']['statusApply'] = $app['status'];
+                // $app['cvNotReject']['statusApply'] = $app['status'];
                 return $app['cvNotReject'];
             }
             return null;
