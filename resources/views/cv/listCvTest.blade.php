@@ -131,7 +131,7 @@
                                             
                                             {{-- @if ($generatedCvs[$cv->id]->template == 'classic') --}}
                                             @if (optional($generatedCvs[$cv->id])->template == 'classic')
-                                                {{-- <div class="cv-container">
+                                                <div class="cv-container">
                                                     <div style="width: 20%; height: auto;">
                                                         @if($generatedCvs[$cv->id]->avatar_path)
                                                             <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt">
@@ -178,9 +178,9 @@
                                                         <hr>
                                                         <p class="cv-section-content">{!! nl2br(e($generatedCvs[$cv->id]->certificates ?? '')) !!}</p>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                             @else
-                                                {{-- <div class="cv-container">
+                                                <div class="cv-container">
                                                     <div class="cv-top">
                                                         <div class="cv-top-left">
                                                             @if($generatedCvs[$cv->id]->avatar_path)
@@ -237,10 +237,10 @@
                                                         <hr>
                                                         <p class="cv-section-content">{!! nl2br(e($generatedCvs[$cv->id]->certificates ?? '')) !!}</p>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                             @endif
                                         @endif
-                                        {{-- <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas> --}}
+                                        <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas>
                                     </div>
                                 </a>
                             </div>
