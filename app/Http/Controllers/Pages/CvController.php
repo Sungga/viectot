@@ -32,7 +32,7 @@ class CvController extends Controller
         // dd($generatedCvs);
         
         // return view('cv.listCv', compact('candidate', 'cvs', 'generatedCvs'));
-        return view('cv.listCvTest', compact('candidate', 'cvs', 'generatedCvs'));
+        return view('cv.listCv', compact('candidate', 'cvs', 'generatedCvs'));
     }
 
     public function showMakeCvForm() {
