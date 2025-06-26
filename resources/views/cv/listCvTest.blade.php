@@ -278,7 +278,7 @@
         </session>
 
         <div class="buyCv">
-            <div class="buyCv__container">
+            {{-- <div class="buyCv__container">
                 <i class="fa-solid fa-circle-xmark buyCv__exit"></i>
                 <h2 class="buyCv__title">Chọn gói muốn mua</h2>
                 <div class="buyCv__list">
@@ -316,7 +316,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 
@@ -351,7 +351,39 @@
     </div>
 
     {{-- ------------------<< show page 1 of file pdf >>-------------------------------- --}}
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cvs = @json($cvs);
 
+            pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+            cvs.forEach(cv => {
+                const canvas = document.getElementById(`pdf-canvas-${cv.id}`);
+                const ctx = canvas.getContext("2d");
+
+                if(cv.file_name == 'CV của hệ thống') {
+
+                }else {
+                    const url = `/storage/cv/${cv.file_name}`;
+    
+                    pdfjsLib.getDocument(url).promise.then(pdf => {
+                        pdf.getPage(1).then(page => {
+                            const viewport = page.getViewport({ scale: 1.0 });
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+    
+                            const renderContext = {
+                                canvasContext: ctx,
+                                viewport: viewport
+                            };
+                            page.render(renderContext);
+                        });
+                    });
+                }
+
+            });
+        });
+    </script> --}}
 
     @vite(['resources/js/listCv.js'])
 </body>
