@@ -632,11 +632,11 @@ class EmployerController extends Controller
         $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
         // $cvs = $applications->pluck('cvNotReject')->filter();
         $cvs = collect($applications)->map(function ($app) {
-            if (!empty($app['cvNotReject'])) {
-                // Gộp status từ application vào cvNotReject
-                // $app['cvNotReject']['statusApply'] = $app['status'];
-                return $app['cvNotReject'];
-            }
+            // if (!empty($app['cvNotReject'])) {
+            //     // Gộp status từ application vào cvNotReject
+            //     // $app['cvNotReject']['statusApply'] = $app['status'];
+            //     return $app['cvNotReject'];
+            // }
             return null;
         })->filter(); // loại bỏ null nếu có
         // $generatedCvs = [];
