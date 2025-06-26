@@ -122,8 +122,8 @@
                         <h1 class="listCv__title">Danh sách cv của bạn</h1>
                         <div class="listCv__list--left"><span class="listCv__listLeft--quantity">{{ $cvs->count() }}</span>/<span class="listCv__listLeft--limit">{{ $candidate->cv_limit }}</span> <a id="btn-add-limit">Thêm giới hạn cv</a></div>
                     </div>
-                    {{-- @foreach ($cvs as $cv)
-                        <div class="listCv__item">
+                    @foreach ($cvs as $cv)
+                        {{-- <div class="listCv__item">
                             <div class="listCv__item--img">
                                 <a href="#">
                                     <div style="background-color: var(--color-white);">
@@ -254,8 +254,8 @@
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
                             </div>
-                        </div>
-                    @endforeach --}}
+                        </div> --}}
+                    @endforeach
                 </div>
             </div>
         </section>
