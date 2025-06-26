@@ -628,16 +628,16 @@ class EmployerController extends Controller
             ->where('id', $id_post)
             ->first();
 
-        // $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
-        // // $cvs = $applications->pluck('cvNotReject')->filter();
-        // $cvs = collect($applications)->map(function ($app) {
-        //     if (!empty($app['cvNotReject'])) {
-        //         // Gộp status từ application vào cvNotReject
-        //         $app['cvNotReject']['statusApply'] = $app['status'];
-        //         return $app['cvNotReject'];
-        //     }
-        //     return null;
-        // })->filter(); // loại bỏ null nếu có
+        $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
+        // $cvs = $applications->pluck('cvNotReject')->filter();
+        $cvs = collect($applications)->map(function ($app) {
+            if (!empty($app['cvNotReject'])) {
+                // Gộp status từ application vào cvNotReject
+                $app['cvNotReject']['statusApply'] = $app['status'];
+                return $app['cvNotReject'];
+            }
+            return null;
+        })->filter(); // loại bỏ null nếu có
         // $generatedCvs = [];
         // foreach($cvs as $cv) {
         //     $cv->apply = Application::where('id_cv', $cv->id)->where('id_post', $id_post)->first();
