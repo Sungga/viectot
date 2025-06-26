@@ -132,13 +132,13 @@
                                             {{-- @if ($generatedCvs[$cv->id]->template == 'classic') --}}
                                             @if (optional($generatedCvs[$cv->id])->template == 'classic')
                                                 <div class="cv-container">
-                                                    <div style="width: 20%; height: auto;">
+                                                    {{-- <div style="width: 20%; height: auto;">
                                                         @if(optional($generatedCvs[$cv->id])->avatar_path)
                                                             <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt">
                                                         @else
                                                             <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt">
                                                         @endif
-                                                    </div>
+                                                    </div> --}}
                                                     {{-- <h2 class="cv-name" style="text-align:center;">{{ $generatedCvs[$cv->id]->name }}</h2>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Ngày sinh:</strong> {{ $generatedCvs[$cv->id]->dob ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Giới tính:</strong> {{ $generatedCvs[$cv->id]->gender ?? '...' }}</p>
@@ -181,7 +181,7 @@
                                                 </div>
                                             @else
                                                 <div class="cv-container">
-                                                    <div class="cv-top">
+                                                    {{-- <div class="cv-top">
                                                         <div class="cv-top-left">
                                                             @if(optional($generatedCvs[$cv->id])->avatar_path)
                                                                 <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt">
@@ -199,7 +199,7 @@
                                                                 <p style="font-size: 1rem;">Địa chỉ: {{ $generatedCvs[$cv->id]->address }}</p>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
 
                                                     {{-- <div class="cv-section">
                                                         <h2 class="cv-section-title">Mục tiêu nghề nghiệp</h2>
