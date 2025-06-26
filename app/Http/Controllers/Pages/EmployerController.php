@@ -629,7 +629,7 @@ class EmployerController extends Controller
             ->first();
 
         // $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
-        $applications = Application::with('cv', 'candidate')->where('id_post', $post->id)->get();
+        $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
         // $cvs = $applications->pluck('cvNotReject')->filter();
         $cvs = collect($applications)->map(function ($app) {
             if (!empty($app['cvNotReject'])) {
@@ -639,20 +639,20 @@ class EmployerController extends Controller
             }
             return null;
         })->filter(); // loại bỏ null nếu có
-        // $generatedCvs = [];
-        // foreach($cvs as $cv) {
-        //     $cv->apply = Application::where('id_cv', $cv->id)->where('id_post', $id_post)->first();
-        //     // dd($apply);
+        $generatedCvs = [];
+        foreach($cvs as $cv) {
+            $cv->apply = Application::where('id_cv', $cv->id)->where('id_post', $id_post)->first();
+            // dd($apply);
 
-        //     if($cv->file_name != 'CV của hệ thống') continue;
-        //     $generatedCv = GeneratedCv::where('cv_id', $cv->id)->first();
-        //     $generatedCvs[$cv->id] = $generatedCv;
-        // }
-        // // dd($generatedCvs);
-        // $candidates = $applications->pluck('candidate')->filter();
-        // // dd($cvs);
+            if($cv->file_name != 'CV của hệ thống') continue;
+            $generatedCv = GeneratedCv::where('cv_id', $cv->id)->first();
+            $generatedCvs[$cv->id] = $generatedCv;
+        }
+        // dd($generatedCvs);
+        $candidates = $applications->pluck('candidate')->filter();
+        // dd($cvs);
 
-        // return view('employer.listApply', compact('employer', 'post', 'cvs', 'candidates', 'generatedCvs'));
+        return view('employer.listApply', compact('employer', 'post', 'cvs', 'candidates', 'generatedCvs'));
     }
 
     public function reject($id_post, $id_candidate) {
