@@ -629,7 +629,7 @@ class EmployerController extends Controller
             ->first();
 
         // $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
-        $applications = Application::with('candidate')->where('id_post', $post->id)->get();
+        $applications = Application::with('cv', 'candidate')->where('id_post', $post->id)->get();
         // // $cvs = $applications->pluck('cvNotReject')->filter();
         // $cvs = collect($applications)->map(function ($app) {
         //     if (!empty($app['cvNotReject'])) {
