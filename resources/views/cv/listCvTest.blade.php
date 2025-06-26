@@ -192,13 +192,13 @@
                                                         <div class="cv-top-right">
                                                             {{-- <h1 class="cv-name">{{ $generatedCvs[$cv->id]->name }}</h1> --}}
                                                             <h1 class="cv-name">{{ optional($generatedCvs[$cv->id])->name ?? 'Không có tên' }}</h1>
-                                                            {{-- <div class="cv-contact-info">
+                                                            <div class="cv-contact-info">
                                                                 <p style="font-size: 1rem;">Ngày sinh: {{ $generatedCvs[$cv->id]->dob }}</p>
                                                                 <p style="font-size: 1rem;">Giới tính: {{ $generatedCvs[$cv->id]->gender }}</p>
                                                                 <p style="font-size: 1rem;">Email: {{ $generatedCvs[$cv->id]->email }}</p>
                                                                 <p style="font-size: 1rem;">Số điện thoại: {{ $generatedCvs[$cv->id]->phone }}</p>
                                                                 <p style="font-size: 1rem;">Địa chỉ: {{ $generatedCvs[$cv->id]->address }}</p>
-                                                            </div> --}}
+                                                            </div>
                                                         </div>
                                                     </div>
 
