@@ -125,7 +125,7 @@
                     @foreach ($cvs as $cv)
                         <div class="listCv__item">
                             <div class="listCv__item--img">
-                                {{-- <a href="#">
+                                <a href="#">
                                     <div style="background-color: var(--color-white);">
                                         @if ($cv->file_name == 'CV của hệ thống')
                                             
@@ -239,9 +239,9 @@
                                                 </div>
                                             @endif
                                         @endif
-                                        <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas>
+                                        {{-- <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas> --}}
                                     </div>
-                                </a> --}}
+                                </a>
                             </div>
                             <div class="listCv__item--name">{{ $cv->name }}</div>
                             <div class="listCv__item--bottom">
