@@ -120,7 +120,7 @@
                                         {{-- <div style="background-color: var(--color-white);"> --}}
                                                 @if ($cv->file_name == 'CV của hệ thống')
                                                     
-                                                    @if ($generatedCvs[$cv->id]->template == 'classic')
+                                                    @if (optional($generatedCvs[$cv->id])->template == 'classic')
                                                         <div class="cv-container">
                                                             <div style="width: 20%; height: auto;">
                                                                 @if($generatedCvs[$cv->id]->avatar_path)
