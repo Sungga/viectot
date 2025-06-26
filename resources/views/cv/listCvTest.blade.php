@@ -139,7 +139,7 @@
                                                             <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt">
                                                         @endif
                                                     </div>
-                                                    <h2 class="cv-name" style="text-align:center;">{{ $generatedCvs[$cv->id]->name }}</h2>
+                                                    {{-- <h2 class="cv-name" style="text-align:center;">{{ $generatedCvs[$cv->id]->name }}</h2>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Ngày sinh:</strong> {{ $generatedCvs[$cv->id]->dob ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Giới tính:</strong> {{ $generatedCvs[$cv->id]->gender ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>SĐT:</strong> {{ $generatedCvs[$cv->id]->phone ?? '...' }}</p>
@@ -177,7 +177,7 @@
                                                         <h2 class="cv-section-title">Chứng chỉ</h2>
                                                         <hr>
                                                         <p class="cv-section-content">{!! nl2br(e($generatedCvs[$cv->id]->certificates ?? '')) !!}</p>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             @else
                                                 <div class="cv-container">
@@ -201,8 +201,7 @@
                                                         </div>
                                                     </div>
 
-
-                                                    <div class="cv-section">
+                                                    {{-- <div class="cv-section">
                                                         <h2 class="cv-section-title">Mục tiêu nghề nghiệp</h2>
                                                         <hr>
                                                         <p class="cv-section-content">{!! nl2br(e($generatedCvs[$cv->id]->career_goal ?? '')) !!}</p>
@@ -236,7 +235,7 @@
                                                         <h2 class="cv-section-title">Chứng chỉ</h2>
                                                         <hr>
                                                         <p class="cv-section-content">{!! nl2br(e($generatedCvs[$cv->id]->certificates ?? '')) !!}</p>
-                                                    </div>
+                                                    </div> --}}
                                                 </div>
                                             @endif
                                         @endif
