@@ -134,7 +134,7 @@
                                                 <div class="cv-container">
                                                     <div style="width: 20%; height: auto;">
                                                         @if(optional($generatedCvs[$cv->id])->avatar_path)
-                                                            {{-- <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt"> --}}
+                                                            <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt">
                                                         @else
                                                             <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt">
                                                         @endif
@@ -184,9 +184,9 @@
                                                     <div class="cv-top">
                                                         <div class="cv-top-left">
                                                             @if(optional($generatedCvs[$cv->id])->avatar_path)
-                                                                {{-- <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt"> --}}
+                                                                <img src="{{ asset($generatedCvs[$cv->id]->avatar_path) }}" alt="Avatar" class="cv-avt">
                                                             @else
-                                                                {{-- <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt"> --}}
+                                                                <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt">
                                                             @endif
                                                         </div>
                                                         {{-- <div class="cv-top-right">
