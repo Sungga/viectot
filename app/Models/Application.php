@@ -23,12 +23,12 @@ class Application extends Model
 
     public function cv()
     {
-        return $this->belongsTo(CV::class, 'id_cv');
+        return $this->belongsTo(Cv::class, 'id_cv');
     }
 
     public function cvNotReject()
     {
-        return $this->belongsTo(CV::class, 'id_cv')->where('status', '!=', 'reject');
+        return $this->belongsTo(Cv::class, 'id_cv')->where('status', '!=', 'reject');
     }
 
     public function post()
