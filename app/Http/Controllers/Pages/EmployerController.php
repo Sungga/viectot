@@ -623,10 +623,10 @@ class EmployerController extends Controller
     }
 
     public function listApply($id_post) {
-        // $employer = Employer::where('id_user', session('user.id'))->first();
-        // $post = Post::with(['branch', 'branch.company', 'branch.branchProvince'])
-        //     ->where('id', $id_post)
-        //     ->first();
+        $employer = Employer::where('id_user', session('user.id'))->first();
+        $post = Post::with(['branch', 'branch.company', 'branch.branchProvince'])
+            ->where('id', $id_post)
+            ->first();
 
         // $applications = Application::with('cvNotReject', 'candidate')->where('id_post', $post->id)->get();
         // // $cvs = $applications->pluck('cvNotReject')->filter();
