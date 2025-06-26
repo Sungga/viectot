@@ -240,7 +240,7 @@
                                                 </div>
                                             @endif
                                         @endif
-                                        <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas>
+                                        {{-- <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas> --}}
                                     </div>
                                 </a>
                             </div>
