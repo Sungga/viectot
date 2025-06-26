@@ -28,7 +28,8 @@ class Application extends Model
 
     public function cvNotReject()
     {
-        return $this->belongsTo(Cv::class, 'id_cv')->where('status', '!=', 'reject');
+        // return $this->belongsTo(Cv::class, 'id_cv')->where('status', '!=', 'reject');
+        return $this->belongsTo(Cv::class, 'id_cv');
     }
 
     public function post()
