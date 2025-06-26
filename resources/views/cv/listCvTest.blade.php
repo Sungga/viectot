@@ -111,7 +111,7 @@
             </div>
         </header>
     
-        <section class="listCv">
+        {{-- <section class="listCv">
             <div class="grid-container">
                 <div class="listCv__top">
                     <a href="{{ route('makeCv.form') }}">Tạo cv</a>
@@ -122,7 +122,6 @@
                         <h1 class="listCv__title">Danh sách cv của bạn</h1>
                         <div class="listCv__list--left"><span class="listCv__listLeft--quantity">{{ $cvs->count() }}</span>/<span class="listCv__listLeft--limit">{{ $candidate->cv_limit }}</span> <a id="btn-add-limit">Thêm giới hạn cv</a></div>
                     </div>
-                    {{-- list cv in here --}}
                     @foreach ($cvs as $cv)
                         <div class="listCv__item">
                             <div class="listCv__item--img">
@@ -245,14 +244,12 @@
                                 </a>
                             </div>
                             <div class="listCv__item--name">{{ $cv->name }}</div>
-                            {{-- <div class="listCv__item--edit"><a href="#">Sửa cv</a></div> --}}
                             <div class="listCv__item--bottom">
                                 @if ($cv->status == 1)
                                     <a href="#"><i class="fa-solid fa-star listCv__item--main"></i></a>
                                 @else
                                     <a href="{{ route('changeMain.cv', ['id' => $cv->id]) }}"><i class="fa-solid fa-star"></i></a>
                                 @endif
-                                {{-- <a href="{{ route('delete.cv') }}" class="listCv__item--del"><i class="fa-solid fa-trash"></i></a> --}}
                                 <a href="{{ route('delete.cv', ['id' => $cv->id]) }}" class="listCv__item--del">
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
@@ -261,7 +258,7 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <session class="addCv">
             <div class="addCv__container">
