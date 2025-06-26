@@ -651,7 +651,7 @@ class EmployerController extends Controller
         $candidates = $applications->pluck('candidate')->filter();
         // dd($cvs);
 
-        return view('employer.listApply', compact('employer', 'post', 'cvs', 'candidates', 'generatedCvs'));
+        // return view('employer.listApply', compact('employer', 'post', 'cvs', 'candidates', 'generatedCvs'));
     }
 
     public function reject($id_post, $id_candidate) {
