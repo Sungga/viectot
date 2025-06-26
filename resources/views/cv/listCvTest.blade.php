@@ -123,9 +123,9 @@
                         <div class="listCv__list--left"><span class="listCv__listLeft--quantity">{{ $cvs->count() }}</span>/<span class="listCv__listLeft--limit">{{ $candidate->cv_limit }}</span> <a id="btn-add-limit">Thêm giới hạn cv</a></div>
                     </div>
                     @foreach ($cvs as $cv)
-                        {{-- <div class="listCv__item">
+                        <div class="listCv__item">
                             <div class="listCv__item--img">
-                                <a href="#">
+                                {{-- <a href="#">
                                     <div style="background-color: var(--color-white);">
                                         @if ($cv->file_name == 'CV của hệ thống')
                                             
@@ -241,7 +241,7 @@
                                         @endif
                                         <canvas id="pdf-canvas-{{ $cv->id }}" style="width: 100%; height: auto; border-radius: 8px;"></canvas>
                                     </div>
-                                </a>
+                                </a> --}}
                             </div>
                             <div class="listCv__item--name">{{ $cv->name }}</div>
                             <div class="listCv__item--bottom">
@@ -254,7 +254,7 @@
                                     <i class="fa-solid fa-trash"></i>
                                 </a>
                             </div>
-                        </div> --}}
+                        </div>
                     @endforeach
                 </div>
             </div>
