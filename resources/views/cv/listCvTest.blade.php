@@ -139,8 +139,8 @@
                                                             <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="cv-avt">
                                                         @endif
                                                     </div>
-                                                    {{-- <h2 class="cv-name" style="text-align:center;">{{ $generatedCvs[$cv->id]->name }}</h2>
-                                                    <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Ngày sinh:</strong> {{ $generatedCvs[$cv->id]->dob ?? '...' }}</p>
+                                                    <h2 class="cv-name" style="text-align:center;">{{ optional($generatedCvs[$cv->id])->name ?? 'Không có tên' }}</h2>
+                                                    {{-- <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Ngày sinh:</strong> {{ $generatedCvs[$cv->id]->dob ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Giới tính:</strong> {{ $generatedCvs[$cv->id]->gender ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>SĐT:</strong> {{ $generatedCvs[$cv->id]->phone ?? '...' }}</p>
                                                     <p class="cv-about" style="font-size: 1rem; text-align:center; width:100%;"><strong>Email:</strong> {{ $generatedCvs[$cv->id]->email ?? '...' }}</p>
@@ -190,7 +190,8 @@
                                                             @endif
                                                         </div>
                                                         <div class="cv-top-right">
-                                                            <h1 class="cv-name">{{ $generatedCvs[$cv->id]->name }}</h1>
+                                                            {{-- <h1 class="cv-name">{{ $generatedCvs[$cv->id]->name }}</h1> --}}
+                                                            <h1 class="cv-name">{{ optional($generatedCvs[$cv->id])->name ?? 'Không có tên' }}</h1>
                                                             {{-- <div class="cv-contact-info">
                                                                 <p style="font-size: 1rem;">Ngày sinh: {{ $generatedCvs[$cv->id]->dob }}</p>
                                                                 <p style="font-size: 1rem;">Giới tính: {{ $generatedCvs[$cv->id]->gender }}</p>
