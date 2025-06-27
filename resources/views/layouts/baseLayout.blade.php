@@ -22,9 +22,9 @@
     <div class="container">
         <header>
             <div class="header__left">
-                <div class="openMenuMB">
+                {{-- <div class="openMenuMB">
                     <i class="fa-solid fa-bars"></i>
-                </div>
+                </div> --}}
                 <div class="header__logo">
                     <a href="{{ route('home') }}">
                         <img src="{{ asset('storage/uploads/VIECTOT.png') }}" alt="Logo">
@@ -145,12 +145,12 @@
             </div>
         </header>
 
-        <div id="menu">
+        {{-- <div id="menu">
             <div class="menuMB__logo">
                 <img src="{{ asset('storage/uploads/VIECTOT.png') }}" alt="Logo">
                 <i class="fa-solid fa-circle-xmark menuMB__exit"></i>
             </div>
-        </div>
+        </div> --}}
         @yield('content')
 
         <section class="footer">
@@ -164,7 +164,7 @@
         @yield('appendage')
         @yield('js')
     </div>
-    <script>
+    {{-- <script>
         function moveBoxesForMobile(){
             if (window.innerWidth <= 767){
                 document.querySelector("#menu").appendChild(document.querySelector(".header__menu--left"));
@@ -177,6 +177,6 @@
 
         window.addEventListener('load', moveBoxesForMobile);
         window.addEventListener('resize', moveBoxesForMobile);
-    </script>
+    </script> --}}
 </body>
 </html>
