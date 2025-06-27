@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\DB;
 class ChatController extends Controller
 {
     public function index($type ,$id_branch, $id_candidate, $id_apply) {
-        dd($id_candidate);
         // kiem tra quyen truy cap
         if ($type === 'candidate'
             && (
@@ -63,6 +62,7 @@ class ChatController extends Controller
         $company = Company::where('id', $branch->id_company)->first();
         $candidate = Candidate::where('id', $id_candidate)->first();
         // $nameAll = ['branchName' => $branchName, 'companyName' => $companyName, 'candidateName' => $candidateName];
+        dd($candidate);
 
         $apply = Application::with(['post'])->where('id', $id_apply)->first();
 
