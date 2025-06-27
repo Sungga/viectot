@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\DB;
 class ChatController extends Controller
 {
     public function index($type ,$id_branch, $id_candidate, $id_apply) {
+        dd($id_candidate);
         // kiem tra quyen truy cap
         if ($type === 'candidate'
             && (
