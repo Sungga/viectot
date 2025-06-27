@@ -103,7 +103,7 @@
                 _token: '{{ csrf_token() }}'
             }, function(data) {
                 $('#message').val('');
-                loadMessages();
+                // loadMessages();
             });
         }
 
