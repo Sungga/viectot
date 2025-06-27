@@ -250,7 +250,7 @@ header {
 }
 
 /* menu mobile */
-#menu {
+/* #menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -258,18 +258,16 @@ header {
     height: 100vh;
     background-color: var(--color-white);
     z-index: 99999;
-}
+} */
 
 /* Điện thoại (nhỏ hơn 768px) */
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .header__left {
         width: 100%;
-        /* display: flex; */
         justify-content: space-between;
     }
 
     .header__right { 
-        /* width: 0; */
         display: none;
      }
 
@@ -283,7 +281,6 @@ header {
     }
     
     #menu {
-        /* display: none; */
         padding: 8px;
     }
 
@@ -322,10 +319,10 @@ header {
     .header__item--left,
     .header__item--right {
     }
-}
+} */
 
 /* Máy tính bảng (từ 768px đến 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
     #menu {
         display: none;
     }
@@ -333,10 +330,10 @@ header {
     .openMenuMB {
         display: none;
     }
-}
+} */
 
 /* Máy tính (trên 1024px) */
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     #menu {
         display: none;
     }
@@ -344,4 +341,4 @@ header {
     .openMenuMB {
         display: none;
     }
-}
+} */
