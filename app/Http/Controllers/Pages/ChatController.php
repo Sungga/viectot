@@ -60,9 +60,9 @@ class ChatController extends Controller
         $branch = Company_branch::where('id', $id_branch)->first();
         // $branchName = $branch->name;
         $company = Company::where('id', $branch->id_company)->first();
-        $candidate = Candidate::where('id', $id_candidate)->first();
+        $candidate = Candidate::where('id_user', $id_candidate)->first();
         // $nameAll = ['branchName' => $branchName, 'companyName' => $companyName, 'candidateName' => $candidateName];
-        dd($candidate);
+        // dd($candidate);
 
         $apply = Application::with(['post'])->where('id', $id_apply)->first();
 
