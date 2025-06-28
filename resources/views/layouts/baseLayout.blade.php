@@ -86,7 +86,14 @@
                                 </ul>
                             </li>
                             <li>
-                                <p class="header__item--right header__item--account"><img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $employer['name'] }} #{{ $employer['id_user'] }}</p>
+                                <p class="header__item--right header__item--account">
+                                    @if ($candidate['avatar'] == "")
+                                        <img id="avatar-preview" src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
+                                        {{-- <img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $employer['name'] }} #{{ $employer['id_user'] }} --}}
+                                    @else
+                                        <img id="avatar-preview" src="{{ asset('storage/uploads/'.$candidate['avatar']) }}" alt="Avatar" class="account__avt">
+                                    @endif
+                                </p>
                                 <ul class="header__menu--user">
                                     {{-- <li><a href="#">Tài khoản</a></li>
                                     <li><a href="#">Hồ sơ</a></li> --}}
