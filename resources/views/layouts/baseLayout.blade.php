@@ -87,11 +87,11 @@
                             </li>
                             <li>
                                 <p class="header__item--right header__item--account">
-                                    @if ($candidate['avatar'] == "")
-                                        <img id="avatar-preview" src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
+                                    @if ($employer['avatar'] == "")
+                                        <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
                                         {{-- <img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $employer['name'] }} #{{ $employer['id_user'] }} --}}
                                     @else
-                                        <img id="avatar-preview" src="{{ asset('storage/uploads/'.$candidate['avatar']) }}" alt="Avatar" class="account__avt">
+                                        <img src="{{ asset('storage/uploads/'.$employer['avatar']) }}" alt="Avatar" class="account__avt">
                                     @endif
                                 </p>
                                 <ul class="header__menu--user">
@@ -132,7 +132,14 @@
                                 </ul>
                             </li>
                             <li>
-                                <p class="header__item--right header__item--account"><img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $candidate['name'] }} #{{ $candidate['id_user'] }}</p>
+                                <p class="header__item--right header__item--account">
+                                    @if ($candidate['avatar'] == "")
+                                        <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
+                                    @else
+                                        <img src="{{ asset('storage/uploads/'.$candidate['avatar']) }}" alt="Avatar" class="account__avt">
+                                    @endif
+                                </p>
+                                {{-- <p class="header__item--right header__item--account"><img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $candidate['name'] }} #{{ $candidate['id_user'] }}</p> --}}
                                 <ul class="header__menu--user">
                                     <li><a href="{{ route('addBasicInfo.form') }}">Tài khoản</a></li>
                                     <li><a href="{{ route('listMessage') }}">Tin nhắn</a></li>
