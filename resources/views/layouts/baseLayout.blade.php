@@ -91,7 +91,7 @@
                                         <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
                                         {{-- <img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $employer['name'] }} #{{ $employer['id_user'] }} --}}
                                     @else
-                                        <img src="{{ asset('storage/uploads/'.$employer['avatar']) }}" alt="Avatar" class="account__avt">
+                                        <img src="{{ asset('storage/avatars/'.$employer['avatar']) }}" alt="Avatar" class="account__avt">
                                     @endif
                                 </p>
                                 <ul class="header__menu--user">
@@ -136,7 +136,7 @@
                                     @if ($candidate['avatar'] == "")
                                         <img src="{{ asset('storage/images/avt.jpg') }}" alt="Avatar" class="account__avt">
                                     @else
-                                        <img src="{{ asset('storage/uploads/'.$candidate['avatar']) }}" alt="Avatar" class="account__avt">
+                                        <img src="{{ asset('storage/avatars/'.$candidate['avatar']) }}" alt="Avatar" class="account__avt">
                                     @endif
                                 </p>
                                 {{-- <p class="header__item--right header__item--account"><img src="{{ asset('storage/uploads/user.svg') }}" alt="">{{ $candidate['name'] }} #{{ $candidate['id_user'] }}</p> --}}
